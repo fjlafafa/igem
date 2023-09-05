@@ -1,0 +1,4 @@
+torch>=1.11
+lightning>=2.0.0
+torchmetrics>=0.7.0
+pandas
