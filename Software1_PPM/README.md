@@ -42,8 +42,8 @@ python script/mutation.py --mode <mode> -i <input_file> -o <output_file> \
 
 For example:
 ```bash
-python ./script/mutation.py -i ./example/PnisA.txt -o ./example/mutation.txt --mode 1 --num 2000
-python ./script/mutation.py -i ./example\PnisA.txt -o ./example/mutation.txt --mode 2 --pos 1,5
+python ./script/mutation.py -i ./example/pl.txt -o ./example/mutation.txt --mode 1 --num 2000
+python ./script/mutation.py -i ./example/pl.txt -o ./example/mutation.txt --mode 2 --pos 1,5
 ```
 
 ### Prediction
@@ -65,7 +65,7 @@ python script/main.py --mode <mode> -i <input_file> -o <output_dir_path> --model
 
 For example:
 ```bash
-python ./script/main.py -i ./example/promoter.csv -o ./example/ --model ./model/best_model_1.ckpt --mode 1 --batch_size 64 --sort
+python ./script/main.py -i ./example/mutation.csv -o ./example/ --model ./model/best_model_1.ckpt --mode 1 --batch_size 64 --sort
 ```
 
 ## Contributing
