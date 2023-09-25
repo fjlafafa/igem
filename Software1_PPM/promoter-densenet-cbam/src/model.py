@@ -52,7 +52,6 @@ class ChannelAttention(nn.Module):
         avg_out = self.shared_mlp(self.avg_pool(x).view(x.size(0), -1))
         max_out = self.shared_mlp(self.max_pool(x).view(x.size(0), -1))
         channel_attention = torch.sigmoid(avg_out + max_out).view(x.size(0), x.size(1), 1, 1)
-        channel_attention = x * channel_attention
         return channel_attention
     
 class SpatialAttention(nn.Module):
@@ -67,7 +66,6 @@ class SpatialAttention(nn.Module):
         spatial_attention = torch.cat([avg_out, max_out], dim=1)
         spatial_attention = self.conv(spatial_attention)
         spatial_attention = torch.sigmoid(spatial_attention)
-        spatial_attention = x * spatial_attention
         return spatial_attention    
 
 class CBAM(nn.Module):
@@ -78,9 +76,9 @@ class CBAM(nn.Module):
         self.spatial_attention = SpatialAttention(kernel_size)
         
     def forward(self, x):
-        x1 = torch.sigmoid(self.channel_attention(x))
-        x2 = torch.sigmoid(self.spatial_attention(x))
-        return x1 * x2
+        x1 = x * torch.sigmoid(self.channel_attention(x))
+        x2 = x1 * torch.sigmoid(self.spatial_attention(x1))
+        return x2
 
 class Model(nn.Module):
     "DenseNet-CBAM model"
