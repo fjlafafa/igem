@@ -1,0 +1,35 @@
+root_dir: ${env:ROOT}
+seed: 12345
+seq: 'MSTKKKPLTQEQLEDARRLKAIYEKKKNELGLSQESVADKMGMGQSGVGALFNGINALNAYNAALLTKILKVSVEEFSPSIAREIYEMYEAVSMQPSLRSEYEYPVFSHVQAGMFSPELRTFTKGDAERWVSTTKKASDSAFWLEVEGNSMTAPTGSKPSFPDGMLILVDPEQAVEPGDFCIARLGGDEFTFKKLIRDSGQVFLQPLNPQYPMIPCNESCSVVGKVIASQWPEETFG'
+
+train:
+  epochs: 5
+  eval_per_step: 100
+  save_per_step: 100
+
+model:
+  num_steps: 20
+  embedding_dim: 64
+  num_layers: 2
+  hidden_size: 64
+  lr: 5e-4
+  weight_decay: 1e-3
+  device: 'cuda'
+
+data:
+  generate: False
+  max_num: 5000
+  max_mut: 50
+  batch_size: 64
+
+wandb: False
+
+task: iterate
+
+iterate: 
+  size: 16
+  path: ${root_dir}/../ckpt/iterate.pt
+  seq_path: ${root_dir}/../new_seq/test.fasta
+  temp_path: ${root_dir}/tm/predicted_tms.txt
+  numstep: 10
+  predicted_tm: 47.7524
