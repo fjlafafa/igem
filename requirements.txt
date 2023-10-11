@@ -1,0 +1,7 @@
+tdqm
+numpy
+torch
+matplotlib
+scikit-learn 
+wandb
+hydra
