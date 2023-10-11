@@ -1,43 +1,9 @@
 # Team Tsinghua 2023 Software Tool
+Software is a powerful tool that can be effectively harnessed to achieve optimal results and reduce labor in wet laboratory experiment. As a dedicated team aspiring to pioneer a novel therapy for breast cancer based on bacteria, Tsinghua 2023 embraces the potential of software tools to enhance our research and development.
 
-If you team competes in the [**Software & AI** village](https://competition.igem.org/participation/villages) or wants to
-apply for the [**Best Software Tool** prize](https://competition.igem.org/judging/awards), you **MUST** host all the
-code of your team's software tool in this repository, `main` branch. By the **Wiki Freeze**, a
-[release](https://docs.gitlab.com/ee/user/project/releases/) will be automatically created as the judging artifact of
-this software tool. You will be able to keep working on your software after the Grand Jamboree.
+The iGEM Team Tsinghua 2023 Software Tool comprises two key components: the Promoter Promotion Model (PPM) and the Protein Engineering Diffusion Model (PEDM).
 
-> If your team does not have any software tool, you can totally ignore this repository. If left unchanged, this
-repository will be automatically deleted by the end of the season.
+The first model, the Promoter Promotion Model (PPM), is a regression model designed to predict the strength of prokaryotic promoters, as characterized by the level of downstream gene expression. This model presents an enhancement of the software developed by the Tsinghua iGEM 2022 team, significantly reducing the memory footprint to just 1/20th of the original while simultaneously improving prediction accuracy by an impressive 22%.
 
-
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might
-be unfamiliar with (for example your team wiki). A list of Features or a Background subsection can also be added here.
-If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew.
-However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing
-specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a
-specific context like a particular programming language version or operating system or has dependencies that have to be
-installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of
-usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably
-include in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started.
-Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps
-explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce
-the likelihood that the changes inadvertently break something. Having instructions for running tests is especially
-helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+The second model, the Protein Engineering Diffusion Model (PEDM), is a generative model that excels in proposing sequences while taking advantage of multiple oracle objectives. This model demonstrates remarkable efficiency in generating sequences with specific target features, providing support for a variety of differentiable oracle functions, offering a robust mathematical foundation, and avoiding the issue of mode collapse.
+## Important: detailed description in the README in the two parts' folders. 
